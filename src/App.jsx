@@ -1,10 +1,12 @@
-import React from 'react'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <h1 className='underline font-bold text-3xl'>
-      Hello, MacBook pro!
-    </h1>
+   <main>
+
+    <Navbar />
+
+   </main>
   )
 }
 

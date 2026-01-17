@@ -1,5 +1,6 @@
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import ProductViewer from './components/ProductViewer'
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
 
     <Navbar />
     <Hero />
+    <ProductViewer />
 
    </main>
   )

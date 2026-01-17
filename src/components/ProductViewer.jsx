@@ -17,9 +17,9 @@ function ProductViewer() {
      <h2>Take a closer look.</h2>
 
      <div className="controls">
-        <p className='info'>MacbookPro {scale} in {color} </p>
+        {/* <p className='info'>MacbookPro {scale} in {color} </p> */}
 
-        <div className="flex-centre gap-5 mt-5">
+        <div className="flex-center gap-5 mt-5">
             <div className="color-control">
                 <div onClick={()=> setColor('#adb5bd')} 
                  className={clsx('bg-neutral-300', color==='#adb5bd' && 'active')}

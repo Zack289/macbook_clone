@@ -3,12 +3,15 @@ import useMacbookStore from "../store/store";
 import { Canvas } from "@react-three/fiber";
 import { Box, OrbitControls } from "@react-three/drei";
 import MacbookModel14 from './models/Macbook-14'
-import Studiolights from "./Studiolights";
-
+import Studiolights from "./three/Studiolights";
+import ModelSwitcher from "./three/ModelSwitcher";
+import { useMediaQuery } from "react-responsive";
 
 function ProductViewer() {
 
     const {color, scale, setColor, setScale} = useMacbookStore();
+    const isMobile = useMediaQuery({query: '(max-width: 1024px)'});
+
   return (
     <section id='product-viewer'>
      <h2>Take a closer look.</h2>
@@ -44,11 +47,10 @@ function ProductViewer() {
      </div>
 
      <Canvas id="canvas" camera={{position: [0,1.5,5], fov: 50, near: 0.1, far: 100}}>
-        <MacbookModel14 scale={0.06} position={[0, 0, 0]} />
 
         <Studiolights />
  
-        <OrbitControls enableZoom={false} />
+        <ModelSwitcher scale={isMobile ? scale - 0.03 : scale} isMobile={isMobile}/>
      </Canvas>
     </section>
   )

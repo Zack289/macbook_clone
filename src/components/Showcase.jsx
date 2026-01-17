@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive"
 
 function Showcase() {
 
-    const isTablet = useMediaQuery({query: '(max-width: 1024px)'});
+    const isTablet = useMediaQuery({query: '(max-width: 1024px)'})
 
     useGSAP(()=>{
         if(!isTablet){
